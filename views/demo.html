@@ -1,0 +1,23 @@
+<div class="header">Demo Site</div>
+<div class="middle">
+	<div class="container" ng-controller="demoController1">
+		<div style="color:red">{{areaOne}}</div>
+		<div><input type="text" ng-model="searchText" /></div>
+		
+		<table border="5" style="padding:2">
+			<tr ng-repeat="v in arr | filter:searchText">
+				<td>{{v}}</td>
+			</tr>
+		</table>
+	</div>
+	<div class="container" ng-controller="demoController2">
+		<div style="color:red">{{areaTwo}}</div>
+		<div><input type="text" ng-model="searchText2" /></div>
+		<table border="5" style="padding:2">
+			<tr ng-repeat="v in arr | filter:searchText2">
+				<td>{{v}}</td>
+			</tr>
+		</table>
+	</div>
+</div>
+<div class="footer">&copy; All rights reserved</div>
